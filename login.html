@@ -11,7 +11,7 @@
     <div class="container">
         <div class="left-side">
             <div class="logo-name">
-                <img src="/assets/logo.png" alt="Company Logo" class="logo">
+                <img src="/assets/logo.jpg" alt="Company Logo" class="logo">
                 <h1 class="company-name">Inventory</h1>
             </div>
             <div class="menu">
@@ -20,8 +20,10 @@
                     <span>Dashboard</span>
                     <i class="fas fa-chevron-down down-arrow"></i>
                     <div class="submenu">
-                        <div class="submenu-item">Total Sales</div>
-                        <div class="submenu-item">Total Purchase</div>
+                        <div class="submenu-item" onclick="loadContent('total_sales.html')">Total Sales</div>
+                        <div class="submenu-item" onclick="loadContent('total_purchase.html')">Total Purchase</div>
+                        <div class="submenu-item" onclick="loadContent('total_customer.html')">Total Customer</div>
+                        <div class="submenu-item" onclick="loadContent('total_suppliers.html')">Total Suppliers</div>
                     </div>
                 </div>
                 <div class="menu-item stock">
@@ -29,8 +31,8 @@
                     <span>Stock</span>
                     <i class="fas fa-chevron-down down-arrow"></i>
                     <div class="submenu">
-                        <div class="submenu-item">Add Product</div>
-                        <div class="submenu-item">Product List</div>
+                        <div class="submenu-item" onclick="loadContent('add_product.html')">Add Product</div>
+                        <div class="submenu-item" onclick="loadContent('product_list.html')">Product List</div>
                     </div>
                 </div>
                 <div class="menu-item sale">
@@ -38,8 +40,8 @@
                     <span>Sales</span>
                     <i class="fas fa-chevron-down down-arrow"></i>
                     <div class="submenu">
-                        <div class="submenu-item">New Sale</div>
-                        <div class="submenu-item">Sale List</div>
+                        <div class="submenu-item" onclick="loadContent('new_sale.html')">New Sale</div>
+                        <div class="submenu-item" onclick="loadContent('sale_list.html')">Sale List</div>
                     </div>
                 </div>
                 <div class="menu-item purchase">
@@ -47,8 +49,8 @@
                     <span>Purchases</span>
                     <i class="fas fa-chevron-down down-arrow"></i>
                     <div class="submenu">
-                        <div class="submenu-item">New Buy</div>
-                        <div class="submenu-item">Purchase List</div>
+                        <div class="submenu-item" onclick="loadContent('new_purchase.html')">New Purchase</div>
+                        <div class="submenu-item" onclick="loadContent('purchase_list.html')">Purchase List</div>
                     </div>
                 </div>
                 <div class="menu-item report">
@@ -56,8 +58,8 @@
                     <span>Report</span>
                     <i class="fas fa-chevron-down down-arrow"></i>
                     <div class="submenu">
-                        <div class="submenu-item">Sales Report</div>
-                        <div class="submenu-item">Purchase report</div>
+                        <div class="submenu-item" onclick="loadContent('sales_report.html')">Sales Report</div>
+                        <div class="submenu-item" onclick="loadContent('purchase_report.html')">Purchase report</div>
                     </div>
                 </div>
             </div>
@@ -79,7 +81,11 @@
                     </div>
                 </div>
             </div>
+            <div class="right-side-body" id="right-side-body">
+                <!-- Content will be loaded here -->
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
